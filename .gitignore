@@ -6,3 +6,6 @@ __pycache__
 
 # Large files
 *.pkl
+
+# System files
+.DS_Store

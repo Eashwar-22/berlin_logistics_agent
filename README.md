@@ -32,7 +32,10 @@ The system uses a ReAct agent architecture (LangGraph) to process user queries. 
 Install the required dependencies:
 
 ```bash
+conda create -n berlin_logistics python=3.11 -y
+conda activate berlin_logistics
 pip install -r requirements.txt
+pip install "mcp[cli]"
 ```
 
 ### 2. Prepare Data and Model
@@ -62,7 +65,11 @@ mcp dev scripts/server.py
 
 ## Example Queries
 
-*   "Check the weather in Berlin."
-*   "Calculate distance from (52.52, 13.40) to (52.50, 13.35)."
-*   "Predict delivery time for a Bike when it is Rainy. Explain the prediction."
-*   "Check for data drift with these times: [90, 85, 95]."
+*   "Calculate distance between 52.52, 13.40 and 52.50, 13.35. Then predict the delivery time for a Bike if the weather is Rainy."
+*   "Predict delivery time for a Bike in Berlin when it is Rainy. Then explain why the prediction is that number."
+*   "Calculate distance between 52.52, 13.40 and 52.50, 13.35. Then predict the delivery time for a Bike if the weather is Sunny. How will the duration be changed if I had used a different vehicle?"
+*   "The delivery times today were [90, 85, 95, 88, 92]. Check if there is data drift."
+*   "Calculate distance between (52.52, 13.40) and (52.50, 13.35). Between which two areas in Berlin are these coordinates? Then predict delivery time for a Ducati in High traffic with a Junior driver in Rain. Explain the prediction."
+
+
+![MCP Sample Output](img/mcp_screenshot.png)
