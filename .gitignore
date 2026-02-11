@@ -1,0 +1,8 @@
+/junk
+.env
+__pycache__
+.venv
+
+
+# Large files
+*.pkl

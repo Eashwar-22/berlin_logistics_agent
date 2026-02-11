@@ -1,0 +1,15 @@
+python-dotenv
+langchain-groq
+langgraph
+pandas
+numpy
+mcp
+streamlit
+folium
+streamlit-folium
+langchain-core
+joblib
+pydantic
+shap
+requests
+scikit-learn
